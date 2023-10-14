@@ -9,7 +9,7 @@ type ButtonProps = {
 
 const CustomButton = ({ type, title, icon, variant }: ButtonProps) => {
   return (
-    <button type={type} className={`flexCenter gap-3 rounded-full border ${variant}`}>
+    <button type={type} className={`flexCenter gap-3 rounded-full cursor-pointer border ${variant}`}>
         {
             icon && (
                 <Image
