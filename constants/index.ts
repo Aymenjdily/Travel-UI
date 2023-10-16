@@ -80,7 +80,6 @@ export const NAV_LINKS = [
       '/facebook.svg',
       '/instagram.svg',
       '/twitter.svg',
-      '/youtube.svg',
       '/wordpress.svg',
     ],
   };

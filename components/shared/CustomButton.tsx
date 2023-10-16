@@ -5,11 +5,12 @@ type ButtonProps = {
     title: string;
     icon?: string;
     variant: string;
+    full?:boolean
 }
 
-const CustomButton = ({ type, title, icon, variant }: ButtonProps) => {
+const CustomButton = ({ type, title, icon, variant, full }: ButtonProps) => {
   return (
-    <button type={type} className={`flexCenter gap-3 rounded-full cursor-pointer border ${variant}`}>
+    <button type={type} className={`flexCenter gap-3 rounded-full cursor-pointer border ${variant} ${full && 'w-full'}`}>
         {
             icon && (
                 <Image
@@ -20,7 +21,7 @@ const CustomButton = ({ type, title, icon, variant }: ButtonProps) => {
                 />
             )
         }
-        <label className="bold-16 whitespace-nowrap">{title}</label>
+        <label className="bold-16 whitespace-nowrap cursor-pointer">{title}</label>
     </button>
   )
 }
